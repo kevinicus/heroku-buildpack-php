@@ -39,10 +39,6 @@ curl --silent --max-time 60 --location "$APACHE_URL" | tar xz
 #curl --silent --max-time 60 --location "$PHP_URL" | tar xz
 
 
-
-echo "----->Installing wget"
-apt-get install wget
-
 # php
 echo "-----> Compiling PHP"
 curl --silent --max-time 60 --location "http://au2.php.net/get/php-5.4.2.tar.gz/from/au.php.net/mirror" | tar xz
