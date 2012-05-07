@@ -45,9 +45,8 @@ apt-get install wget
 
 # php
 echo "-----> Compiling PHP"
-wget http://php.net/get/php-5.3.6.tar.gz/from/us.php.net/mirror 
-tar xzvf php.tar.gz
-cd php-5.3.6/
+curl --silent --max-time 60 --location "http://au2.php.net/get/php-5.4.2.tar.gz/from/au.php.net/mirror" | tar xz
+cd php-5.4.2/
 ./configure --prefix=/app/php --with-apxs2=/app/apache/bin/apxs --with-mysql --with-pdo-mysql --with-pgsql --with-pdo-pgsql --with-iconv --with-gd --with-curl=/usr/lib --with-config-file-path=/app/php --enable-soap=shared --with-openssl
 make
 make install
