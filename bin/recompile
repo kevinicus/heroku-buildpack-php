@@ -1,6 +1,4 @@
 #!/bin/bash
-
-
 LD_LOG=`pwd`/build.log
 
 log_action() 
@@ -21,6 +19,8 @@ do_log()
           shift 2
             echo "$prefix [${category}] $@" | tee -a $BUILD_LOG
 }
+
+echo '-----> Recompiling'
 
 CURL_FLAGS="--silent --max-time 60 --location"
 
