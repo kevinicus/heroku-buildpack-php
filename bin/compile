@@ -42,7 +42,7 @@ curl --silent --max-time 60 --location "$APACHE_URL" | tar xz
 
 # php
 echo "-----> Compiling PHP"
-wget http://us2.php.net/get/php-5.3.6.tar.gz/from/us.php.net/mirror 
+curl http://php.net/get/php-5.3.6.tar.gz/from/us.php.net/mirror 
 mv mirror php.tar.gz
 tar xzvf php.tar.gz
 cd php-5.3.6/
